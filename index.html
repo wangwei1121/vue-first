@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>my-project</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="app-1">
+      <app-vue></app-vue>
+    </div>
+
+    <div id="app2">
+      <ul>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ul>
+    </div>
+    <div id="demo">{{ fullName }}</div>
+    <div id="example">
+      <p>Original message: "{{ message }}"</p>
+      <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    </div>
+    <div id="watch-example">
+      <p>
+        Ask a yes/no question:
+        <input v-model="question">
+      </p>
+      <p>{{ answer }}</p>
+    </div>
+    <ul id="example-2">
+      <li v-for="(item, index) in items">
+        {{ parentMessage }} - {{ index }} - {{ item.message }}
+      </li>
+    </ul>
+    <div class="box-card" id="article-1">
+      <div slot="header" class="clearfix">
+        <h1 style="line-height: 36px; color: #20A0FF">豆瓣电影排行榜</h2>
+      </div>
+      <div v-for="article in articles" class="text item">
+        {{article.title}}
+      </div>
+    </div>
+    <script src="/dist/build.js"></script>
+    </body>
+</html>
